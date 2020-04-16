@@ -1,0 +1,8 @@
+.header {
+    background-image: linear-gradient(to right, #051937, #10325f, #184f8b, #1b6dba, #128deb);
+    padding : 10px;
+    color : white;
+    font-family: 'Cinzel', serif;
+    border-bottom: 5px solid #051937;
+    text-align: center;
+}

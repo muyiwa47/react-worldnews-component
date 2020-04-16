@@ -1,0 +1,16 @@
+.filter {
+    text-align: center;
+    border-bottom: 1px solid #b4c1cf;
+    background-color: #f8fcff;
+}
+
+.filter label {
+    color : #3a4961;
+    font-family: 'Shadows Into Light', cursive;
+    text-shadow: 1px 1px #e1c4c4;
+    padding: 10px;
+}
+
+.checkbox-genre {
+    display: inline-block;
+}
