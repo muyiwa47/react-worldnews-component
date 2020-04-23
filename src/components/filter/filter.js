@@ -9,7 +9,7 @@ export default class Filter extends React.Component {
 
     changeCase(str) {
         return str.toUpperCase()
-     }
+    }
 
     render(){
         return (
@@ -27,8 +27,3 @@ export default class Filter extends React.Component {
         )
     }
 }
-
-
-// return (
-//     <div><input type="checkbox" id="scales" name="scales"><label for="scales">Scales</label></div>
-//   )
