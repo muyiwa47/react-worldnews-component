@@ -9,7 +9,7 @@ import Filter from './components/filter/filter';
 class App extends React.Component {
   constructor(props){
      super(props)
-      this.state = { data : [], filterArr : [], genre : [], genrelist : [] };
+      this.state = { data : [], filterArr : [], genre : [], genrelist : '' };
 }
 
     componentDidMount(){
@@ -28,15 +28,7 @@ class App extends React.Component {
     }
 
     genreList = (e) => {
-      let arr = this.state.genrelist;
-      (arr.indexOf(e.target.id) === -1) ? arr.push(e.target.id) : arr.splice(arr.indexOf(e.target.id), 1)
-        return this.setState({ genrelist : [...arr]})
-    }
-
-    generateGenre = (data) => {
-      let genre = [];
-      genre = data.map(item => item.category)
-      return new Set(genre);
+        return this.setState({ genrelist : e.target.id})
     }
 
     render(){
@@ -44,7 +36,7 @@ class App extends React.Component {
         <div className="App">
           <Header />
           <Filter data={this.state.genre} genreList={this.genreList} />
-          <Sources data={this.state.data} filterArr={this.state.genrelist} />
+          <Sources data={this.state.data} genre={this.state.genrelist} />
           <Footer />
         </div>
       );

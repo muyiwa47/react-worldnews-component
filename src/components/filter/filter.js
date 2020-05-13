@@ -2,11 +2,6 @@ import React from 'react';
 import './filter.css';
 
 export default class Filter extends React.Component {
-    constructor(props){
-        super(props)
-        console.log(this.props)
-    }
-
     changeCase(str) {
         return str.toUpperCase()
     }
@@ -17,9 +12,9 @@ export default class Filter extends React.Component {
                 {  this.props.data.map((item) => {
                     return (
                        <div key={item} className="checkbox-genre">
-                           <label for={item}><strong>{this.changeCase(item)}</strong>
-                           <input type="checkbox" id={item} name={item} onClick={this.props.genreList} />
-                           </label>
+                            <label htmlFor={item}><strong>{this.changeCase(item)}</strong>
+                            <input type="radio" id={item} value={item} name="genre" onChange={this.props.genreList} />
+                            </label>
                         </div>
                        )
                 })}
