@@ -13,13 +13,11 @@ export default class Sources extends React.Component {
  filterData(arr, source){
   var data = [];
     if (arr.length > 0) {
-     arr.forEach((itemObject) => {
-       source.forEach((item) => {
-         if (item.category === itemObject) {
-             data.push(item)
-            }
-         });
-       });
+      arr.forEach((itemObject) => {
+          data = source.filter((item) => {
+            return (item.category === itemObject)
+          });
+      });
         return data
     } else {
         return source
