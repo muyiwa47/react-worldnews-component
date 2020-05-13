@@ -14,7 +14,7 @@ class App extends React.Component {
 
     componentDidMount(){
         const apiKey = 'cbbf845e87d94bfa99f0f1419fbe6b00';
-        fetch(`http://newsapi.org/v2/sources?apiKey=${apiKey}`)
+        fetch(`https://newsapi.org/v2/sources?apiKey=${apiKey}`)
           .then((response) => { return response.json(); })
             .then((data) => { this.setState({ data: [...data.sources]});
                return this.state.data;
