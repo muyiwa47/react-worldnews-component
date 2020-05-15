@@ -27,7 +27,7 @@ export default class Sources extends React.Component {
             <div className="source_name"><strong>{source.name}</strong></div>
             <div className="source_desc">{source.description}</div>
             <div className="source_category">{this.changeCase((source.category))} | {this.changeCase(source.language)}</div>
-            <a href={source.url} className="source_link" target="_blank" rel="noopener noreferrer">{source.id}</a>
+            <a href={source.url} className="source_link" target="_blank" rel="noopener noreferrer"><strong>{source.id}</strong></a>
           </div>
         )
       })}
