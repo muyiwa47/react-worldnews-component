@@ -28,7 +28,7 @@ class App extends React.Component {
             return genre
       }).then((genre) => {
         this.setState({ genre: [...genre]})
-        this.setState({ isLoading : false});
+           this.setState({ isLoading : false});
       });
     }
 

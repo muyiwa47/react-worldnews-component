@@ -1,15 +1,104 @@
 .filter {
     text-align: center;
     border-bottom: 1px solid #b4c1cf;
-    background-color: #f8fcff;
 }
 
 .filter label {
     color : #3a4961;
     font-family: 'Shadows Into Light', cursive;
     padding: 10px;
+    cursor: pointer;
 }
 
 .checkbox-genre {
     display: inline-block;
+}
+
+.filter input[type="radio"]{
+    display: none;
+}
+
+.filter input[type="radio"]:checked + label {
+    background-color: #112f61;
+    color: whitesmoke;
+    padding: 8px;
+    border-radius: 2px;
+}
+
+/* .container {
+    display: inline-block;
+    cursor: pointer;
+    width : 50px;
+    height : 50px;
+    background-image: url('menu-icon.png');
+  } */
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {opacity: 0;}
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+@media (max-width : 685px){
+    .filter div {
+        display: block;
+        text-align: left;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .filter {
+        position: absolute;
+        width: 250px;
+        height: 400px;
+        padding-top: 0px;
+        top: 100px;
+        right: 50px;
+        margin-top: -50px;
+        background-color: white;
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+    }
+
+      .container {
+        display: inline-block;
+        cursor: pointer;
+        width : 40px;
+        height : 40px;
+        background-image: url('menu-icon.png');
+        position: absolute;
+        padding: 5px;
+        top: 0px;
+      }
+
+      .filter input[type="radio"]:checked + label {
+        background-color: white;
+        cursor: pointer;
+        color:rgb(8, 16, 134)
+      }
+
+      .slideout {
+        right: -200px;
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+      }
+
 }
